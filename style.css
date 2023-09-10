@@ -21,7 +21,7 @@ html, body{
     background: linear-gradient(#2b1055, #7597de);
 }
 span{
-    color: crimson;
+    color: crimson; z
     -webkit-text-stroke: 1px #fff;
 }
 .container{
