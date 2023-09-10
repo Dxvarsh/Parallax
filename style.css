@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    height: 100vh;
+    perspective: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient(#2b1055, #7597de);
+}
+
+.container{
+    height: 100%;
+    transform-style: preserve-3d; /* iske bina parallax effect nahi aayega */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.background, .forground{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+.background{
+    transform: translateZ(-120px) scale(15); /* parallax */
+}
+
+.forground{
+    left: -15px;
+    transform: translateZ(-20px) scale(3); /* parallax */
+}
+
+h1{
+    position: absolute;
+    color: #fff;
+    font-size: 7rem;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.417);
+}
+
+section{
+    position: absolute;
+    z-index: 1;
+    background-color:rgb(28, 5, 34);
+}
+
+.bg1{
+    background-image: url("http://www.thehistoryhub.com/wp-content/uploads/2014/04/Night-in-Taj-Mahal.jpg");
+}
+
+.bg2{
+    background-image: url("https://blog.kenkaminesky.com/wp-content/uploads/2010/03/Kaminesky-Blog-Rome-Colloseum-1a.jpg");
+}
+
+.bg3{
+    background-image: url("http://i.imgur.com/0e8Vki7.jpg");
+}
+
+.bg4{
+    background-image: url("https://andeanhikersperu.com/wp-content/uploads/Machu-Picchu-Adventour-Peru.jpg");
+}
+
+.bg5{
+    background-image: url("https://images4.alphacoders.com/787/thumb-1920-787639.jpg");
+}
+
+.bg6{
+    background-image: url("https://cdn.theculturetrip.com/wp-content/uploads/2017/02/14764188248_c3ce4317c0_k.jpg");
+}
+
+.bg7{
+    background-image: url("http://www.9to5carwallpapers.com/wp-content/uploads/2018/05/Full-Image-of-Great-Wall-of-China-Night-view.jpg");
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section h2{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    /* transform: translateX(-50%) translateY(-50%); */
+    font-size: 4vw;
+    padding: 0 5vw;
+    font-weight: 600;
+}
+
+section p{
+    margin: 5vw 0;
+    padding: 0 5vw;
+    font-size: 1.5rem;
+}
+
+@media (max-width:600px) {
+    h1{
+        font-size: 10vw;
+    }
+    section h2{
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        right: 2%;
+        font-size: 7vw;
+        padding: 0 5vw;
+        font-weight: 800;
+        background-color: #fff;
+        color: #2b1055;
+    }
+    section p{
+        margin: 5vw 0;
+        padding: 0 5vw;
+        font-size: 1rem;
+    }
+}
