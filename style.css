@@ -137,4 +137,7 @@ section p{
         padding: 0 5vw;
         font-size: 1rem;
     }
+    foreground {
+        height: 50vh;
+    }
 }
